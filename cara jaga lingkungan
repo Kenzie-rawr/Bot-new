@@ -78,4 +78,5 @@ async def meme2(ctx):
 async def cara_jaga_bumi(ctx):
     await ctx.send("1.Mengurangi penggunaan plastik: Anda bisa menggunakan tas belanja yang bisa digunakan kembali, botol yang bisa diisi ulang, dan memilih kemasan yang minimalis. 2.Menanam pohon: Menanam pohon di sekitar rumah dapat mengurangi polusi udara, menyediakan tempat tinggal bagi makhluk hidup, dan membuat lingkungan terasa sejuk dan asri. 3.Menghemat energi: Anda bisa menggunakan listrik, air, dan kertas seperlunya. ")
 
-bot.run("MTI5NTczODY4OTc1Mzg0MTc2Ng.GV-yyG.4K6ENXhEkP7MD_Wvv0KRJziXajwUf4N6udTZ84")
+bot.run("Token Bot Mu disini")
+
