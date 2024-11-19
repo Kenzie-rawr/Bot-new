@@ -1,0 +1,81 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Hi! I am a robot{bot.user}!')
+
+@bot.command()
+async def heh(ctx, count_heh = 5):
+    await ctx.send("he" * count_heh)
+
+@bot.command()
+async def emotbatu(ctx):
+    await ctx.send(f'🗿')
+
+@bot.command()
+async def tengkorak(ctx):
+    await ctx.send(f'💀')
+
+@bot.command()
+async def wow(ctx):
+    await ctx.send(f'Keren kan🤣')
+
+@bot.command()
+async def bantumtk(ctx):
+    await ctx.send(f'ok, -add- utk tambah, -min- utk kurang, -time- utk kali')
+
+@bot.command()
+async def tolong(ctx):
+    await ctx.send(f'Code utk mtk: $bantumtk, Code utk emot batu: $emotbatu , utk emot tengkorak: $tengkorak dan code : $heh')
+
+@bot.command()
+async def repeat(ctx, times: int, content='repeating...'):
+    """Repeats a message multiple times."""
+    for i in range(times):
+        await ctx.send(content)
+
+@bot.command()
+async def add(ctx, left: int, right: int):
+    """Adds two numbers together."""
+    await ctx.send(left + right)
+
+@bot.command()
+async def min(ctx, left: int, right: int):
+    """Adds two numbers together."""
+    await ctx.send(left - right)
+
+@bot.command()
+async def time(ctx, left: int, right: int):
+    """Adds two numbers together."""
+    await ctx.send(left * right)
+@bot.command()
+async def meme(ctx):
+    with open('img/meme.jpeg', 'rb') as f:
+        # Mari simpan file perpustakaan/library Discord yang dikonversi dalam variabel ini!
+        picture = discord.File(f)
+   # Kita kemudian dapat mengirim file ini sebagai tolok ukur!
+    await ctx.send(file=picture)
+
+@bot.command()
+async def meme2(ctx):
+    with open('img/meme2.jpeg', 'rb') as f:
+        # Mari simpan file perpustakaan/library Discord yang dikonversi dalam variabel ini!
+        picture = discord.File(f)
+   # Kita kemudian dapat mengirim file ini sebagai tolok ukur!
+    await ctx.send(file=picture)
+
+@bot.command()
+async def cara_jaga_bumi(ctx):
+    await ctx.send("1.Mengurangi penggunaan plastik: Anda bisa menggunakan tas belanja yang bisa digunakan kembali, botol yang bisa diisi ulang, dan memilih kemasan yang minimalis. 2.Menanam pohon: Menanam pohon di sekitar rumah dapat mengurangi polusi udara, menyediakan tempat tinggal bagi makhluk hidup, dan membuat lingkungan terasa sejuk dan asri. 3.Menghemat energi: Anda bisa menggunakan listrik, air, dan kertas seperlunya. ")
+
+bot.run("MTI5NTczODY4OTc1Mzg0MTc2Ng.GV-yyG.4K6ENXhEkP7MD_Wvv0KRJziXajwUf4N6udTZ84")
